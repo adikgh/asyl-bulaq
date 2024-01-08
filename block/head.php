@@ -33,15 +33,19 @@
 <meta name="msapplication-starturl" content="https://<?=$site['site']?>">
 
 <!-- css -->
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Unbounded:wght@400;600&display=swap" >
+
+
 <link rel="stylesheet" href="/assets/pl/fontawesome/css/all.min.css" />
-<? if ($site_set['swiper']): ?> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" /> <? endif ?>
+<? if (@$site_set['swiper']): ?> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" /> <? endif ?>
 <!-- <? if ($site_set['aos']): ?> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> <? endif ?> -->
 
 <!-- main css -->
 <link rel="stylesheet" type="text/css" href="/assets/css/anim.css?v=<?=$ver?>" />
 <link rel="stylesheet" type="text/css" href="/assets/css/norm.css?v=<?=$ver?>" />
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css?v=<?=$ver?>" />
 <? foreach ($css as $i): ?> <link rel="stylesheet" type="text/css" href="/assets/css/<?=$i?>.css?v=<?=$ver?>" /> <? endforeach ?>
 
 <!-- js -->
@@ -49,9 +53,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script> -->
 <script src="/assets/js/func.js?v=<?=$ver?>"></script>
-<? if ($site_set['swiper']): ?> <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script> <? endif ?>
+<? if (@$site_set['swiper']): ?> <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script> <? endif ?>
 <!-- <? if ($site_set['aos']): ?> <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <? endif ?> -->
 
 

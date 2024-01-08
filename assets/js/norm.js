@@ -38,14 +38,6 @@ $(document).ready(function() {
 	})
 
 
-	// 
-	let scroll = $(window).scrollTop();
-	if (scroll > 400) $('.tabs_f').addClass('tabs_act'); else $('.tabs_f').removeClass('tabs_act');
-	$(window).scroll(function() {
-    	scroll = $(window).scrollTop();
-		if (scroll > 400) $('.tabs_f').addClass('tabs_act'); else $('.tabs_f').removeClass('tabs_act');
-	})
-
 
 
 
@@ -195,8 +187,14 @@ $(document).ready(function() {
 
 
 
+
+
 	// 
-	$('.faq-a').each(function(){$(this).height($(this).children('.faq-ah').height())})
+	setTimeout(function() {
+		$('.faq-a').each(function(){
+			$(this).height($(this).children('.faq-ah').height())
+		})
+	}, 3000);
 	$('.faq-a').on('click', function(e) {
 		e.preventDefault();
 		if ($(this).hasClass('faq-act') == true) {
@@ -204,7 +202,7 @@ $(document).ready(function() {
 			$(this).height($(this).children('.faq-ah').height())
 		} else {
 			$(this).addClass('faq-act')
-			$(this).height($(this).children('.faq-text').height() + $(this).children('.faq-ah').height() + 30)
+			$(this).height($(this).children('.faq-text').height() + $(this).children('.faq-ah').height() + 10)
 		}
 	});
 

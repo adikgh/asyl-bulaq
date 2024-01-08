@@ -8,41 +8,50 @@
 						<div class="logo_i lazy_logo" style="background-image: url('images/logo.png');"></div>
 					</a>
 				</div>
-				<div class="menu">
-					<a href="/">
-						<div class="menu_i">Главная</div>
-					</a>
-					<a href="lechenie.php">
-						<div class="menu_i">Лечение</div>
-					</a>
-					<a href="nomera.php">
-						<div class="menu_i">Номера</div>
-					</a>
-					<a href="price.php">
-						<div class="menu_i">Прайс</div>
-					</a>
-					<a href="contacts.php">
-						<div class="menu_i">Контакты</div>
-					</a>
+				<div class="cmenu">
+					<a href="/"><div class="cmenu_i">Главная</div></a>
+					<a href="lechenie.php"><div class="cmenu_i">Лечение</div></a>
+					<a href="nomera.php"><div class="cmenu_i">Номера</div></a>
+					<a href="price.php"><div class="cmenu_i">Прайс</div></a>
 				</div>
 			</div>
 			<div class="header_r">
-				<!--<div class="lang">
-					<a href="https://shipajaily.kz/?lang=kz" class="lang_ia"><span>Қазақша</span><span>ҚАЗ</span></a>						<div class="lang_i"><span>Русский</span><span>РУС</span></div>					</div>-->
 				<div class="phone_nm">
-					<a href="tel:+7 706 808 50 50">+7 (706) 808-50-50</a>
+					<a href="tel:<?=$site['phone']?>"><?=$site['phone_view']?></a>
 				</div>
+
+				<? if ($site_set['menu'] == true): ?>
+					<div class="menu">
+						<div class="menu_bars menu_bars_clc"><div class="menu_bars_i"></div></div>
+						<div class="menu_c">
+							<a href="/">
+								<div class="menu_ci">
+									<div class="menu_cin"><i class="fal fa-home"></i></div>
+									<div class="menu_cih">Главная</div>
+								</div>
+							</a>
+							<a href="lechenie.php">
+								<div class="menu_ci">
+									<div class="menu_cin"><i class="fal fa-heart-rate"></i></div>
+									<div class="menu_cih">Лечение</div>
+								</div>
+							</a>
+							<a href="nomera.php">
+								<div class="menu_ci">
+									<div class="menu_cin"><i class="fal fa-hotel"></i></div>
+									<div class="menu_cih">Номера</div>
+								</div>
+							</a>
+							<a href="price.php">
+								<div class="menu_ci">
+									<div class="menu_cin"><i class="fal fa-tenge"></i></div>
+									<div class="menu_cih">Прайс</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				<? endif ?>
 			</div>
 		</div>
-	</div>
-</div>
-
-<!-- tabs -->
-<div class="tabs_f">
-	<div class="tabs">
-		<a href="/" class="tabs_i tabs_iact"><div class="tabs_img"></div></a>
-		<a href="nomera.php" class="tabs_i "><i class="far fa-hotel"></i></a>
-		<a href="lechenie.php" class="tabs_i "><i class="far fa-users"></i></a>
-		<a href="tel:+77068085050" class="tabs_i"><i class="far fa-phone"></i></a>
 	</div>
 </div>

@@ -1,105 +1,37 @@
-<!DOCTYPE html>
-<!-- saved from url=(0024)https://design033.qutty.kz/catalog/ -->
-<html lang="ru" class=" -webkit-"> 
-<?php include 'include/head.php'?>
-<body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0">
-<?php include 'include/cat-hdr.php'?>	 
-<!-- body start-->
-	<div class="body">
+<? include 'config/core.php';
 
-<div class="blc1">
-	<div class="bl_c">
-		<div class="head_c">
-			<h4 class="txt_tu txt_c">Лечение в санаторий Асыл Булак Сарыагаш</h4>
-			<div class="head_ln">
-				<ul>
-					<li><a href="/">Главная</a></li>
-					<span><i class="fal fa-angle-right"></i></span>
-					<li>Список лечения</li>
-				</ul>
+	// site setting
+	$menu_name = 'treatment';
+	$site_set['visible'] = 'after';
+	$site_set['header_wh'] = true;
+	$site_set['header_logo'] = 'cl';
+	$site_set['swiper'] = true;
+	$js = ['main'];
+?>
+<? include 'block/header.php'; ?>
+
+<!--  -->
+	<div class="blc1">
+		<div class="bl_c">
+			<div class="head_c">
+				<h4 class="txt_tu txt_c">Лечение в санаторий Асыл Булак Сарыагаш</h4>
+				<div class="head_ln">
+					<ul>
+						<li><a href="/">Главная</a></li>
+						<span><i class="fal fa-angle-right"></i></span>
+						<li>Список лечения</li>
+					</ul>
+				</div>
 			</div>
-<!-- 			<div class="head_btn">
-				<div class="btn btn_sqr btn_filtr"><i class="far fa-sliders-v"></i></div>
-			</div> -->
 		</div>
 	</div>
-</div>
 
-
-
+<!--  -->
 <div class="blc2">
 	<div class="bl_c">
 		<div class="blc2_c">
-			<div class="blc2_t">
-				<div class="blc2_ttc">
-					<div class="blc2_tth">персон:</div>
-					<div class="blc2_tti">
-						<div class="blc2_ttic"><i class="far fa-user-friends"></i></div>
-						<p><span>2</span> взрослый</p>
 
-						<div class="blc2_ttca">
-							<div class="blc2_ttca_c">
-								<div class="blc2_ttca_i">
-									<div class="btn btn_sqr2"><i class="far fa-plus"></i></div>
-									<div class="blc2_ttca_is"><span>2</span></div>
-									<div class="btn btn_sqr2"><i class="far fa-minus"></i></div>
-								</div>
-								<div class="blc2_ttca_i">
-									<div class="btn btn_sqr2"><i class="far fa-plus"></i></div>
-									<div class="blc2_ttca_is"><span>0</span></div>
-									<div class="btn btn_sqr2"><i class="far fa-minus"></i></div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="blc2_ttc">
-					<div class="blc2_tth">продолжительность:</div>
-					<div class="blc2_tti">
-						<div class="blc2_ttic"><i class="far fa-moon"></i></div>
-						<p>на <span>5</span> ночей</p>
-
-						<div class="blc2_ttca">
-							<div class="blc2_ttca_c2">
-								<div class="blc2_ttca_i">5 ночей</div>
-								<div class="blc2_ttca_i">6 ночей</div>
-								<div class="blc2_ttca_i">7 ночей</div>
-								<div class="blc2_ttca_i">8 ночей</div>
-								<div class="blc2_ttca_i">9 ночей</div>
-								<div class="blc2_ttca_i">10 ночей</div>
-								<div class="blc2_ttca_i">болшее</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-<!-- 				<div class="blc2_ttc">
-					<div class="blc2_tth">за ночь:</div>
-					<div class="blc2_tti">
-						<div class="blc2_ttic"><i class="far fa-tenge"></i></div>
-						<p>от <span>5 000</span></p>
-					</div>
-				</div> -->
-				<div class="blc2_ttc">
-					<div class="blc2_tth">звезд:</div>
-					<div class="blc2_tti2">
-						<div class="blc2_tts"><span>5</span><i class="far fa-star"></i></div>
-						<div class="blc2_tts"><span>4</span><i class="far fa-star"></i></div>
-						<div class="blc2_tts"><span>3</span><i class="far fa-star"></i></div>
-					</div>
-				</div>
-<!-- 				<div class="blc2_ttc">
-					<div class="blc2_tth">СОРТИРОВАТЬ:</div>
-					<div class="blc2_tti">
-						<div class="blc2_ttic"><i class="far fa-sort"></i></div>
-						<p>по популярности</p>
-					</div>
-				</div> -->
-				<div class="blc2_ttc"><div class="btn"><i class="far fa-search"></i><span>искать</span></div></div>
-			</div>
-
-<div class="blc2_b">
+			<div class="blc2_b">
 				
 							<a href="em-vanna.php" class="bl5_i">
 								<div class="bl5_ia lazy_bag" style="background-image: url('images/em/vanna.webp?v=10');"></div>
@@ -389,20 +321,9 @@
 								</div>
 							</a>
 							</div>
-	</div>
-</div>
-</div>
-<?php include 'include/jslinks.php' ?>
-<?php include 'include/bulttar.php'?>
-<?php include 'include/footer.php'?>
-<?php include 'include/tegin-cons.php'?>
-<?php include 'include/syilyq.php'?>
-<?php include 'include/demalys-esepte.php' ?>
-<?php include 'include/bolisu.php' ?>
+						</div>
+					</div>
+				</div>
 
 
-	<div class="bl_mess">
-		<div class="bl_mess_sam"></div>
-	</div>
-</body>
-</html>
+<? include 'block/footer.php'; ?>

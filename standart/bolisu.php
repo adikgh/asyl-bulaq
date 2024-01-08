@@ -25,7 +25,7 @@
 					</a>
 				</div>
 				<div class="pop_bl_share_b">
-					<div class="btn btn_bl2 btn_copy" onclick="copytext(&#39;&#39;)">
+					<div class="btn btn_bl2 btn_copy" onclick="copytext()">
 						<i class="far fa-copy"></i>
 						<span>копировать ссылку</span>
 					</div>

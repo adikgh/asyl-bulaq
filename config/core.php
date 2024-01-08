@@ -17,7 +17,7 @@
 
 	// data
 	$core = new core;
-	$site = mysqli_fetch_array(db::query("select * from `site` where id = 1"));
+	$site = mysqli_fetch_array(db::query("select * from `site` where id = 2"));
 	$site_set = [
 		'preload' => true,
 		'header' => true,
