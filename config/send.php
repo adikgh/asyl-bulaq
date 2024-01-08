@@ -16,7 +16,8 @@
 		$phone = substr_replace($phone, '8', 0, 1);
 
 		$arr = array(
-			'Типі: '			=> $sms,
+			'Cайт: '		=> 'AsylB',
+			'Типі: '		=> $sms,
 			'Аты-жөні: '	=> $name,
 			'Телефон: ' 	=> $phone
 		);
@@ -37,6 +38,7 @@
 		$phone = substr_replace($phone, '8', 0, 1);
 
 		$arr = array(
+			'Cайт: '		=> 'AsylB',
 			'Типі: '			=> $sms,
 			'Телефон: ' 	=> $phone
 		);
@@ -61,6 +63,7 @@
 		$phone = substr_replace($phone, '8', 0, 1);
 
 		$arr = array(
+			'Cайт: '		=> 'AsylB',
 			'Типі: '						=> 'Тест №1',
 			'Адам саны: ' 				=> $tv1,
 			'Дем алу күні: ' 			=> $tv2,
@@ -90,6 +93,7 @@
 		$phone = substr_replace($phone, '8', 0, 1);
 
 		$arr = array(
+			'Cайт: '		=> 'AsylB',
 			'Типі: '			=> 'Забронировать',
 			'Санатория: '	=> $sms1,
 			'Номер: '		=> $sms2,
