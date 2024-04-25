@@ -13,52 +13,100 @@
 
     <!-- block 1 - offer -->
     <div class="bl1">
-        <div class="bl1_a lazy_bag" style="background-image: url('images/bl34.jpg')"></div>
 
+        <div class="element-with-video-bg jquery-background-video-wrapper">
+            <video class="my-background-video jquery-background-video" loop autoplay muted playsinline poster="/assets/video/IMG_4738.JPG">
+                <source src="/assets/video/IMG_0991.MOV" type="video/mp4">
+                <source src="#path/to/video.webm" type="video/webm">
+                <source src="#path/to/video.ogv" type="video/ogg">
+            </video>
+            <div class="viewport-header">
+                <h1>Санаторий <span>Saryagash 777</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="blx2">
         <div class="bl_c">
-            <div class="bl1_c">
-                <div class="bl1_offer aos-init aos-animate" data-aos="fade-up" data-aos-delay="700"><h1>Санаторий Асыл Булак <br>более 20 видов <br>лечебных процедур</h1></div>
-                <div class="bl1_disc aos-init aos-animate" data-aos="fade-up" data-aos-delay="800"><p>Минеральная вода Сарыагаш <br>номера от 16 500 тг </p></div>
-                <div class="bl1_btn aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
-                    <div class="btn disb_zab">
-                        <span>Заказать звонок</span>
-                        <div class="bl1_btn_a aos-init aos-animate" data-aos="fade-up" data-aos-delay="1000">
-                            <div class="bl1_btn_ab lazy_bag" style="background-image: url('images/19384_12.png');"></div>
-                            <span>Кликайте по кнопке заказа сейчас. Скидки от 10% до 20%</span>
-                        </div>
+            <div class="blx2_c">
+                <div class="blx2_tx">
+                    <h1>Современная санатория в Сарыагаше</h1>
+                    <p>Наш санаторий получил известность благодаря своим природным ресурсам. Его минеральные воды оказывают сильнейший лечебный эффект, восстанавливая нормальную работу пищеварительной системы и других органов и систем. В городе также производят виноградные вина, которые относятся к классу элитных.</p>
+                </div>
+                <div class="blx2_mp">
+                    <div class="blx2_mpc">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad11ad9a84819ad9288fb12d4a1a36efdfe65a34127e959521bb21fe7caec092f&amp;source=constructor" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="sana_bl2">
+		<div class="bl_c">
+			<div class="head_c">
+                <h1 class="txt_tu txt_c">Выбрать номера</h1>
+            </div>
+            <div class="sana_bl2_c">
+
+                <? $sql = db::query("select * from sanatorium_number where arh is null ORDER BY id ASC"); ?>
+                <? while ($ana = mysqli_fetch_array($sql)): ?>
+                    <div class="bl5_i">
+                        <a class="bl5_ia lazy_bag" data-src="/assets/uploads/number/<?=$ana['img']?>" href="#">
+                            <div class="bl5_icn"><p><?=$ana['type_name']?></p></div>
+                        </a>
+                        <div class="bl5_ic">
+                            <div class="bl5_icb">
+                                <div class="bl5_ictp"><?=$ana['door_name']?></div>
+                                <div class="bl5_icbn">
+                                    <div class="bl5_ics">Цена за одного гостя:</div>
+                                    <div class="bl5_icp fr_price"><?=$ana['price']?></div>
+                                </div>
+                            </div>
+                            <? if ($ana['btn']): ?>
+                                <div class="bl5_icbtn">
+                                    <div class="btn">Забронировать</div>
+                                    <!-- <a class="btn btn_bl2" href="#">Подробнее</a> -->
+                                </div>
+                            <? endif ?>
+                        </div>
+                    </div>
+                <? endwhile ?>
+
+            </div>
+        </div>
+	</div>
+
     <!-- block 7 -  -->
     <div class="bl7" id="bl2">
         <div class="bl_c">
-            <div class="head_c txt_c">
-                <div class="head_v1">
-                    <div class="head_vt aos-init" data-aos="fade-up">наши преимущества</div>
-                    <h3 data-aos="fade-up" data-aos-delay="100" class="aos-init">Отдыхайте в Сарыагаш с нами</h3>
-                </div>
+            <div class="head_c">
+                <h1 class="txt_tu txt_c">наши преимущества</h1>
             </div>
             <div class="bl7_c">
-                <div class="bl7_i aos-init" data-aos="fade-up">
-                    <div class="bl7_img lazy_bag" data-src="images/pr1.jpg"></div>
-                    <h6 class="bl7_in">Бесплатное бронирование</h6>
-                    <p class="bl7_it">Бронирование без комиссий, <br>гарантия брони</p>
+                <div class="bl7_i ">
+                    <div class="bl7_img lazy_bag" data-src="/assets/img/bag/scale_2400.jpeg"></div>
+                    <div class="bl7_ic">
+                        <p class="bl7_in">Бесплатное бронирование</p>
+                        <p class="bl7_it">Бронирование без комиссий, <br>гарантия брони</p>
+                    </div>
                 </div>
-                <div class="bl7_i aos-init" data-aos="fade-up">
-                    <div class="bl7_img lazy_bag" data-src="images/pr2.jpg"></div>
-                    <h6 class="bl7_in">Более 20 видов процедур</h6>
-                    <p class="bl7_it">Минеральная вода <br>Сарыагаш - лечебный фактор</p>
+                <div class="bl7_i ">
+                    <div class="bl7_img lazy_bag" data-src="/assets/uploads/77/IMG_4717.JPG"></div>
+                    <div class="bl7_ic">
+                        <p class="bl7_in">Более 20 видов процедур</p>
+                        <p class="bl7_it">Минеральная вода <br>Сарыагаш - лечебный фактор</p>
+                    </div>
                 </div>
-                <div class="bl7_i aos-init" data-aos="fade-up">
-                    <div class="bl7_img lazy_bag" data-src="images/pr31.jpg"></div>
-                    <h6 class="bl7_in">Услуги трансфера</h6>
-                    <p class="bl7_it">Встречаем вас с вокзала <br>или с аэропорта</p>
+                <div class="bl7_i ">
+                    <div class="bl7_img lazy_bag" data-src="/assets/img/bag/field_image_original_79743_mcz_zr0fko92q_9xxycfftkdk_042915331619.jpg"></div>
+                    <div class="bl7_ic">
+                        <p class="bl7_in">Услуги трансфера</p>
+                        <p class="bl7_it">Встречаем вас с вокзала <br>или с аэропорта</p>
+                    </div>
                 </div>
             </div>
-            <div class="bl7_b aos-init" data-aos="fade-up">
+            <div class="bl7_b ">
                 <p>Напишите нам на Whatsapp и мы расскажем все более детально</p>
                 <a target="_blank" href="https://wa.me/77068085050">
                     <div class="btn btn_whatsapp"><i class="fab fa-whatsapp"></i><span>Написать</span></div>
@@ -67,196 +115,259 @@
         </div>
     </div>
 
-    <!-- block 2 -  -->
-    <div class="bl2">
-        <div class="bl_c">
-            <div class="head_c txt_c">
-                <div class="head_v1">
-                    <div class="head_vt aos-init" data-aos="fade-up">Для кого наш санаторий?</div>
-                    <h3 data-aos="fade-up" data-aos-delay="100" class="aos-init">Вам понравится наши санаторий, если вы</h3>
-                </div>
-            </div>
-            <div class="bl2_con">
-                <div class="bl2_i aos-init" data-aos="fade-up">
-                    <div class="bl2_img lazy_bag" data-src="images/person-getting-massage_1f486.png"></div>
-                    <h6 class="bl2_l">Для тех, кто хочет хорошего отдыха и поправить здоровья</h6>
-                    <div class="bl_raz">После отдыха</div>
-                    <p class="bl2_r">Вернётесь домой свежими и сильными</p>
-                </div>
-                <div class="bl2_i aos-init" data-aos="fade-up">
-                    <div class="bl2_img lazy_bag" data-src="images/person-running_1f3c3.png"></div>
-                    <h6 class="bl2_l">Хотите улучшить здоровье, и укрепить иммунитет</h6>
-                    <div class="bl_raz">После лечения</div>
-                    <p class="bl2_r">Не только улучшить состояния здоровья, но и будет повышение жизненного тонуса и настроения</p>
-                </div>
-                <div class="bl2_i aos-init" data-aos="fade-up">
-                    <div class="bl2_img lazy_bag" data-src="images/person-taking-bath_1f6c0.png"></div>
-                    <h6 class="bl2_l">Хотите лечение минеральной водой</h6>
-                    <div class="bl_raz">После приема воды</div>
-                    <p class="bl2_r">Уменьшаются боли в желудке и подреберье, пропадают изжога и вздутие</p>
-                </div>
-                <div class="bl2_i aos-init" data-aos="fade-up">
-                    <div class="bl2_img lazy_bag" data-src="images/man-blond-hair_1f471-200d-2642-fe0f.png"></div>
-                    <h6 class="bl2_l">Долго оставаться молодыми и здоровыми!</h6>
-                    <div class="bl_raz">После отдыха</div>
-                    <p class="bl2_r">Улучшается цвет и структура кожи, избавляетесь мимических морщин., а также сбросить лишний вес</p>
-                </div>
-            </div>
-            <div class="bl2_b aos-init" data-aos="fade-up">
-                <p>Позаботьтесь о себе, и о своем здоровье сегодня!</p>
-                <a href="catalog.php">
-                    <div class="btn"><span>Список санаториев</span><i class="far fa-long-arrow-right"></i></div>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- block 13 -->
     <div class="bl13">
-        <div class="swiper-container bl13_c swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
-            <div class="swiper-wrapper" style="height: 560px;" id="swiper-wrapper-8ccbbed159dada6a" aria-live="polite">
-                <div class="swiper-slide swiper-slide-active" style="width: 1530px;" role="group" aria-label="1 / 2">
-                    <div class="bl_c aos-init" data-aos="fade-up">
-                        <div class="bl131_c">
-                            <div class="bl13_l">
-                                <div class="head_c">
-                                    <h3>Хотите подарить близким поездку в Асыл Булак?</h3>
-                                    <p>У нас сможете заказать «ПОДАРОЧНЫЙ СЕРТИФИКАТ»</p>
-                                </div>
-                                <div class="btn disb_zab2"><span>подарить</span></div>
-                            </div>
-                            <div class="bl13_r"><div class="bl13_ri lz_bl13" data-src="images/10.jpg"></div></div>
+        <div class="bl13_c">
+            <div class="bl_c">
+                <div class="bl131_c">
+                    <div class="bl13_l">
+                        <div class="head_c">
+                            <h3>Хотите подарить близким поездку в Saryagash 777?</h3>
+                            <p>У нас сможете заказать «ПОДАРОЧНЫЙ СЕРТИФИКАТ»</p>
                         </div>
+                        <div class="btn disb_zab2"><span>подарить</span></div>
                     </div>
+                    <div class="bl13_r"><div class="bl13_ri lz_bl13" data-src="images/10.jpg"></div></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--  -->
-    <div class="bl4">
+
+    <!-- block 5 -->
+    <div class="blx3">
         <div class="bl_c">
-        <form id="test1">
-            <div class="bl4_con">
-
-                <div class="head_c txt_c">
-                    <h4 data-aos="fade-up">Подберите оптимальный вариант</h4>
-                    <p data-aos="fade-up" data-aos-delay="100"><?=t::w('bl4_p')?></p>
-                </div>
-
-                <div class="bl4_cls swiper-container">
-                    <div class="gallery-pagination bl4_pag" data-aos="fade-up" data-aos-delay="150"></div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <h5 class="bl4_v" data-aos="fade-up" data-aos-delay="200"><?=t::w('tv1')?></h5>
-                            <div class="form_im form_imr">
-                                <div class="form_imri" data-aos="fade-up" data-aos-delay="250">
-                                    <label class="radio" for="tv11">
-                                        <input type="radio" name="tv1" value="1" id="tv11" checked>
-                                        <span>1 <?=t::w('person')?></span>
-                                    </label>
-                                </div>
-                                <div class="form_imri" data-aos="fade-up" data-aos-delay="300">
-                                    <label class="radio" for="tv12">
-                                        <input type="radio" name="tv1" value="2" id="tv12">
-                                        <span>2 <?=t::w('person')?></span>
-                                    </label>
-                                </div>
-                                <div class="form_imri" data-aos="fade-up" data-aos-delay="350">
-                                    <label class="radio" for="tv13">
-                                        <input type="radio" name="tv1" value="3-4" id="tv13">
-                                        <span>3-4 <?=t::w('person')?></span>
-                                    </label>
-                                </div>
-                                <div class="form_imri" data-aos="fade-up" data-aos-delay="400">
-                                    <label class="radio" for="tv14">
-                                        <input type="radio" name="tv1" value="<?=t::w('more')?>" id="tv14">
-                                        <span><?=t::w('more')?></span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <h5 class="bl4_v"><?=t::w('tv2')?></h5>
-                            <div class="form_im form_imr">
-                                <div class="form_imri">
-                                    <label class="radio" for="tv21">
-                                        <input type="radio" name="tv2" value="5" id="tv21" checked>
-                                        <span>5 <?=t::w('days')?></span>
-                                    </label>
-                                </div>
-                                <div class="form_imri">
-                                    <label class="radio" for="tv22">
-                                        <input type="radio" name="tv2" value="7" id="tv22">
-                                        <span>7 <?=t::w('days')?></span>
-                                    </label>
-                                </div>
-                                <div class="form_imri">
-                                    <label class="radio" for="tv23">
-                                        <input type="radio" name="tv2" value="10" id="tv23">
-                                        <span>10 <?=t::w('days')?></span>
-                                    </label>
-                                </div>
-                                <div class="form_imri">
-                                    <label class="radio" for="tv24">
-                                        <input type="radio" name="tv2" value="<?=t::w('more2')?>" id="tv24">
-                                        <span><?=t::w('more2')?></span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <h5 class="bl4_v"><?=t::w('tv3')?></h5>
-                            <div class="form_im form_imr">
-                                <div class="form_imri">
-                                    <label class="radio" for="tv31">
-                                        <input type="radio" name="tv3" value="эконом" id="tv31" checked>
-                                        <span>Эконом</span>
-                                    </label>
-                                </div>
-                                <div class="form_imri">
-                                    <label class="radio" for="tv32">
-                                        <input type="radio" name="tv3" value="Стандарт" id="tv32">
-                                        <span>Стандарт</span>
-                                    </label>
-                                </div>
-                                <div class="form_imri">
-                                    <label class="radio" for="tv33">
-                                        <input type="radio" name="tv3" value="Комфорт" id="tv33">
-                                        <span>Комфорт</span>
-                                    </label>
-                                </div>
-                                <div class="form_imri">
-                                    <label class="radio" for="tv34">
-                                        <input type="radio" name="tv3" value="Люкс" id="tv34">
-                                        <span>Люкс</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <h5 class="bl4_v"><?=t::w('tv4')?></h5>
-                            <div class="form_im"><input type="text" class="form_im_txt name" name="name" data-lenght="2" placeholder="<?=t::w('enter your name')?>" /></div>
-                            <div class="form_im"><input type="tel" class="form_im_txt phone phone2 ms_phone" name="phone" data-lenght="11" placeholder="<?=t::w('enter the number')?>" /></div>
-                        </div>
-                    </div>
-                    <div class="bl4_clb" data-aos="fade-up">
-                        <div class="gallery-prev"><div class="btn btn_back"><i class="far fa-angle-left"></i><span><?=t::w('back')?></span></div></div>
-                        <div class="gallery-next"><div class="btn btn_back"><span><?=t::w('farther')?></span><i class="far fa-angle-right"></i></div></div>
-                        <div class="gallery-send"><div class="btn btn_back test1"><span><?=t::w('pick up')?></span><i class="far fa-angle-right"></i></div></div>
-                    </div>
-                </div>
+            <div class="head_c">
+                <h1 class="txt_tu txt_c">ВИДЫ ЛЕЧЕНИЯ</h1>
             </div>
-        </form>
+            <div class="blx3_c">
+                
+                <? $sql = db::query("select * from sanatorium_lesh where type = 1 and rek = 1 ORDER BY number ASC"); ?>
+                <? while ($ana = mysqli_fetch_array($sql)): ?>
+                    <div class="bl5_i " href="#em-vanna.php" >
+                        <div class="bl5_ia lazy_bag" data-src="images/em/<?=$ana['img']?>"></div>
+                        <div class="bl5_ic">
+                            <div class="bl5_ict"><?=$ana['name']?></div>
+                            <!-- <div class="bl5_icb">
+                                <p>Через день</p>
+                                <div class="bl5_icp fr_price"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                <? endwhile ?>
+                
+			</div>
+
+            <!-- <div class="bl5_b ">
+                <p>У нас есть подходящие процедуры для каждого гостя</p>
+                <a href="lechenie.php"><div class="btn"><span>Посмотреть все процедуры </span><i class="far fa-long-arrow-right"></i></div></a>
+            </div> -->
+
         </div>
     </div>
 
 
+    <!-- block 9 -->
+    <div class="bl9">
+        <div class="bl_c">
+            <div class="head_c">
+                <h1 class="txt_tu txt_c">Отзывы гостей</h1>
+            </div>
+            <div class="bl9_c">
+                <div class="swiper-container bl9_con swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
+                    <div class="swiper-wrapper" id="swiper-wrapper-d682467132afbaef" aria-live="polite" style="height: 230px;">
+                        
+                                    <div class="swiper-slide bl9_i  swiper-slide-active"style="margin-right: 30px;" role="group" aria-label="1 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw1.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Архат Омаров</div><div class="bl9_ils">Источник: <i class="fab fa-instagram"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Рахмет ребятам из Центра брони Сарыагаш. Организовали мой отдых отлично. Вдобавок экскурсию сделали в культурный </p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i  swiper-slide-next"style="margin-right: 30px;" role="group" aria-label="2 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw2.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Марина Давыденко</div><div class="bl9_ils">Источник: <i class="fab fa-instagram"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Благодарю редят из Центр Брони Сарыагаш. Они сделали скидку, встретили. Помогли с экскурсией.</p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="3 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw3.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Акмарал Исабаева</div><div class="bl9_ils">Источник: <i class="fab fa-whatsapp"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Курортная зона Сарыагаш оказывается более 50-ти вариантов для размещения. Выбрать оптимальный было непросто. Но ребята из Центр брони сделали скидку, помогли найти хороший вариант отдыха. Желаю успехов! </p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="4 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw4.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Макпал Уразова</div><div class="bl9_ils">Источник: <i class="fab fa-whatsapp"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Благодарю ребят из Центра Бронирования. Они честно помогли выбрать отличный способ отдыха. Из Шымкента встретили. Еще процедуры в бонус дали. Моя семья довольна</p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="5 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/reviews/rw5.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Ережеп Мырзабаев</div><div class="bl9_ils">Источник: <i class="fab fa-instagram"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Заказали звонок через сайт. Ребята перезвонили. Сделали бронь. Отдых был у меня в разгар сезона. Номера, сервис и питание понравились. Желаю процветания и успехов</p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="6 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw6.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Макпал Арсеновна</div><div class="bl9_ils">Источник: <i class="fab fa-whatsapp"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Нам был нужен санаторий рядом с парковой зоной, с бассейном. Ребята из Центр Брони Сарыагаш показали несколько вариантов для нашего отдыха. Мы остановились на санаторий Коктерек. Нам понравилось</p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="7 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw7.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Наталья Ивановна</div><div class="bl9_ils">Источник: <i class="fab fa-whatsapp"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Я впервые отдохнула и очистила организм в курорте Сарыагаш. Нам показали отличный вариант отдыха. Благодарю ребят. Дали еще экскурсию в культурный центр. Классно было</p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="8 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw8.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Умиджон Еламанов</div><div class="bl9_ils">Источник: <i class="fab fa-instagram"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it">Мы приехали из России. Отдохнули хорошо. Все было замечательно. Номера, питание, отдых на высоте. Еще совсем недорого!</p>
+                                    </div>
+                                
+                                    <div class="swiper-slide bl9_i "style="margin-right: 30px;" role="group" aria-label="9 / 9">
+                                        <div class="bl9_iln">
+                                            <div class="bl9_iln2">
+                                                <div class="bl9_ilogo lazy_rev" data-src="images/rw9.jpg"></div>
+                                                <div class="bl9_ilc"><div class="bl9_ilname">Балаби Расылханов</div><div class="bl9_ils">Источник: <i class="fab fa-whatsapp"></i></div></div>
+                                            </div>
+                                            <div class="bl9_ildt">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bl9_it"> Мы отдохнули в санаторий Дархан. Забронировали через сайт Онлайн Бронирования. Все понравилось. Ребята сделали скидку. Санаторий был с бассейном. Номера светлые. Приедем еще</p>
+                                    </div>
+                                                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                <div class="swiper-button-prev bl9_prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-d682467132afbaef" aria-disabled="true"><div class="btn btn_sqr"><i class="fal fa-chevron-left"></i></div></div>
+                <div class="swiper-button-next bl9_next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-d682467132afbaef" aria-disabled="false"><div class="btn btn_sqr"><i class="fal fa-chevron-right"></i></div></div>
+            </div>
+            <div class="bl9_b ">
+                <p>Мы организуем Ваш отдых в Сарыагаш. Нажмите Связаться</p>
+                <a target="_blank" href="https://wa.me/77784141722"><div class="btn">Связаться</div></a>
+            </div>
+        </div>
+    </div>
+
+    <? if ($site_set['bl12']): ?>
+        <div class="bl12">
+            <div class="bl_c">
+                <div class="bl12_c">
+                    <div class="head_c">
+                        <h4 class="txt_tu txt_c"><?=t::w('bl12_off')?></h4>
+                    </div>
+                    <div class="bl12_r2c">
+                        <? $sql = db::query("select * from `word_blocks` where type = 'bl12' and lang = '$lang' ORDER BY number ASC"); ?>
+                        <?	while($ana = mysqli_fetch_array($sql)): ?>
+                            <div class="bl12_r2ci">
+                                <div class="bl12_r2cimg"><?=$ana['img']?></div>
+                                <h6 class="bl12_r2cic"><?=$ana['txt1']?></h6>
+                            </div>
+                        <? endwhile ?>
+                    </div>
+                    <div class="bl12_b">
+                        <p><?=t::w('bl12_b')?></p>
+                        <div class="btn disb_zab3"><span><?=t::w('Get a discount')?></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <? endif ?>
+
+    <? if ($site_set['bl11']): ?>
+        <div class="bl11">
+            <div class="bl_c">
+                <div class="bl11_c">
+                    <div class="head_c"><h4><?=t::w('Frequently asked Questions')?></h4></div>
+                    <div class='faq'>
+                        <? $sql = db::query("select * from `word_blocks` where type = 'bl11' and lang = '$lang' ORDER BY number ASC"); ?>
+                        <? while($ana = mysqli_fetch_array($sql)): ?>
+                            <div class="faq-a">
+                                <div class="faq-ah">
+                                    <div class="faq-arrow"><i class="fal fa-plus"></i></div>
+                                    <h6 class="faq-heading"><?=$ana['txt1']?></h6>
+                                </div>
+                                <p class="faq-text"><?=$ana['txt2']?></p>
+                            </div>
+                        <? endwhile ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <? endif ?>
 
 
+    <? if (!$site_set['bl10']): ?>
+        <div class="bl10">
+            <div class="bl10_c">
+                <div class="head_c txt_c">
+                    <h4><?=t::w('Still have questions?')?></h4>
+                    <p><?=t::w('bl10_w')?></p>
+                </div>
+                <div class="form_c">
+                    <div class="form_im dsp_n"><input type="text" class="sms" value="Консультация 2"></div>
+                    <div class="form_im"><input type="tel" placeholder="+7 (___) ___-__-__" class="form_im_txt phone ms_phone"></div>
+                    <div class="form_im"><div class="btn send"><span><?=t::w('submit your')?></span></div></div>
+                </div>
+            </div>
+        </div>
+    <? endif ?>
 
-
-    <? include 'standart/sanatori-basbet.php' ?>
-    <? include 'standart/lebiz.php' ?>
 
 <? include 'block/footer.php'; ?>

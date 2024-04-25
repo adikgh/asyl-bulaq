@@ -45,8 +45,19 @@ $(document).ready(function() {
 
 
 
-	// setting input
-	$(".ms_phone").inputmask("+7 (999) 999-99-99");
+	// mask form
+	$('.fr_code').mask('0000');
+	$('.fr_age').mask('00');
+	$('.fr_number').mask('# ##0', {reverse: true});
+	$('.fr_days').mask('000 күн', {reverse: true});
+	$('.fr_price').mask('# ##0 тг', {reverse: true});
+	$('.fr_phone').mask('8 (000) 000-00-00');
+	$('.ms_phone').mask('+7 (000) 000-00-00');
+	$('.fr_phone2').mask('+7 (000) 000-00-00');
+	$('.fr_metrika').mask('00 000 000');
+	$('.fr_pixel').mask('000 000 000 000 000');
+
+
 	$('input[type=text]').on('input', function(){
 		if ($(this).val().length < $(this).attr('data-lenght')) $(this).attr('data-pr', 0)
 		else {

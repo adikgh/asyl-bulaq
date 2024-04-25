@@ -10,7 +10,7 @@
 						<div class="cmenu">
 							<? $sql = db::query("select * from `site_menu` where number is not null ORDER BY number ASC"); ?>
 							<? while ($ana = mysqli_fetch_array($sql)): ?>
-								<a href="<?=$ana['href']?>" class="cmenu_i"><?=$ana['name_'.$lang]?></a>
+								<a href="#<?=$ana['href']?>" class="cmenu_i"><?=$ana['name_'.$lang]?></a>
 							<? endwhile ?>
 						</div>
 					<? endif ?>
@@ -32,7 +32,7 @@
 							<div class="menu_c">
 								<? $sql = db::query("select * from `site_menu` where number is not null ORDER BY number ASC"); ?>
 								<? while ($ana = mysqli_fetch_array($sql)): ?>
-									<a class="menu_ci" href="<?=$ana['href']?>">
+									<a class="menu_ci" href="#<?=$ana['href']?>">
 										<div class="menu_cin"><?=$ana['icon']?></div>
 										<div class="menu_cih"><?=$ana['name_'.$lang]?></div>
 									</a>

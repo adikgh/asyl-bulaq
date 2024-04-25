@@ -5,7 +5,7 @@
 			<div class="header_l">
 				<div class="logo">
 					<a href="/">
-						<div class="logo_i lazy_logo" style="background-image: url('images/logo.png');"></div>
+						<div class="logo_i lazy_logo" style="background-image: url('/assets/img/logo/logo_w.png');"></div>
 					</a>
 				</div>
 				<div class="cmenu">
@@ -30,19 +30,19 @@
 									<div class="menu_cih">Главная</div>
 								</div>
 							</a>
-							<a href="lechenie.php">
+							<a href="#lechenie.php">
 								<div class="menu_ci">
 									<div class="menu_cin"><i class="fal fa-heart-rate"></i></div>
 									<div class="menu_cih">Лечение</div>
 								</div>
 							</a>
-							<a href="nomera.php">
+							<a href="#nomera.php">
 								<div class="menu_ci">
 									<div class="menu_cin"><i class="fal fa-hotel"></i></div>
 									<div class="menu_cih">Номера</div>
 								</div>
 							</a>
-							<a href="price.php">
+							<a href="#price.php">
 								<div class="menu_ci">
 									<div class="menu_cin"><i class="fal fa-tenge"></i></div>
 									<div class="menu_cih">Прайс</div>
